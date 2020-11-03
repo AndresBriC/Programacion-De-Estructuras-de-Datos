@@ -4,6 +4,6 @@ using namespace std;
 
 int main()
 {
-    cout << "Segunda Prueba del gitignore, let's see" << endl;
+    cout << "Prueba uso de gitbash con linea de comandos, asda" << endl;
     return 0;
 }
