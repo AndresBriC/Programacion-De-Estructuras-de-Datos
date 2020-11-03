@@ -54,3 +54,18 @@
 	"Fecha.h"
 	"Hora.h"
 
+1602894241 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\act3.4\conexionescomputadora.cpp
+	"ConexionesComputadora.h"
+	<fstream>
+	<sstream>
+	<string>
+
+1602894071 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\act3.4\conexionescomputadora.h
+	<stdio.h>
+	<iostream>
+	<vector>
+	<queue>
+	<stack>
+	"Registro.h"
+	"Fecha.h"
+
