@@ -33,3 +33,6 @@
 
 # CodeBlocks
 *.cbp
+
+# Extra
+*.pdf
