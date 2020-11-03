@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1599224209 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\ordenamientogenérico\ordenamiento.cpp
+	"Ordenamiento.h"
+	<vector>
+
+1599570297 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\ordenamientogenérico\ordenamiento.h
+	<iostream>
+	<vector>
+
+1599224752 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\ordenamientogenérico\main.cpp
+	<iostream>
+	<algorithm>
+	"Ordenamiento.h"
+	<time.h>
+	<iterator>
+
+1599280669 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\ordenamientogenérico\profesor.cpp
+	"Profesor.h"
+	<string>
+	<iostream>
+
+1599225826 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\ordenamientogenérico\profesor.h
+	<string>
+

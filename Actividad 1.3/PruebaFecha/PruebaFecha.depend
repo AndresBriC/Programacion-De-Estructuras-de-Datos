@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1600930736 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actividad 1.3\pruebafecha\main.cpp
+	<iostream>
+	<string>
+	<vector>
+

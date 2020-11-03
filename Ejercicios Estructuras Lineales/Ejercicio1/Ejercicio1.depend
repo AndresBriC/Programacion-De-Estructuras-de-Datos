@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1602248955 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\ejercicios estructuras lineales\ejercicio1\main.cpp
+	<iostream>
+	"D:\Universidad\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\3er Semestre\Estructuras de Datos\QueueEnClase\Queue\Queue.h"
+	"D:\Universidad\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\3er Semestre\Estructuras de Datos\StackEnClase\STack\Stack.h"
+
+1602246032 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\queueenclase\queue\queue.h
+	<iostream>
+	"LinkedList.h"
+
+1602246365 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\queueenclase\queue\linkedlist.h
+	<ostream>
+	"Node.h"
+
+1601434333 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\queueenclase\queue\node.h
+	<iostream>
+
+1602249041 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\stackenclase\stack\stack.h
+	<iostream>
+	"D:\Universidad\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\3er Semestre\Estructuras de Datos\ListaEnlazadaEnClase\LinkedList.h"
+
+1602246365 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\stackenclase\stack\linkedlist.h
+	<ostream>
+	"Node.h"
+
+1601434333 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\stackenclase\stack\node.h
+	<iostream>
+
+1601646717 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\listaenlazadaenclase\linkedlist.h
+	<ostream>
+	"Node.h"
+
+1601434333 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\listaenlazadaenclase\node.h
+	<iostream>
+

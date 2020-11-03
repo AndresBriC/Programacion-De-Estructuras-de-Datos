@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1601068058 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actividad1.3\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<string>
+	"Registro.h"
+	"Ordenamiento.h"
+	"Fecha.h"
+
+1600972170 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actividad1.3\registro.cpp
+	"Registro.h"
+	<iostream>
+
+1600971347 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actividad1.3\registro.h
+	<string>
+	<iostream>
+	"Fecha.h"
+
+1600879415 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actividad1.3\ordenamiento.h
+	<iostream>
+	<vector>
+
+1601068343 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actividad1.3\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1601068353 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actividad1.3\fecha.h
+	<iostream>
+
+1601068343 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\act1.3\actividad1.3\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1601068353 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\act1.3\actividad1.3\fecha.h
+	<iostream>
+
+1602735159 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\act1.3\actividad1.3\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<string>
+	"Registro.h"
+	"Ordenamiento.h"
+	"Fecha.h"
+
+1600971347 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\act1.3\actividad1.3\registro.h
+	<string>
+	<iostream>
+	"Fecha.h"
+
+1600879415 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\act1.3\actividad1.3\ordenamiento.h
+	<iostream>
+	<vector>
+
+1600972170 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\act1.3\actividad1.3\registro.cpp
+	"Registro.h"
+	<iostream>
+

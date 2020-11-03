@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1584209020 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\act 1.2 - algoritmos de búsqueda y ordenamiento\main.cpp
+	<iostream>
+
+1599886202 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\act 1.2 - algoritmos de búsqueda y ordenamiento\libro.cpp
+	"Libro.h"
+
+1599886332 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\act 1.2 - algoritmos de búsqueda y ordenamiento\libro.h
+	<string>
+

@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1584205420 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\act3.4\main.cpp
+	<iostream>
+
+1602887543 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos-y-algoritmos-fundamentales\tc1031(portafolio_final)\act3.4\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1602887493 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos-y-algoritmos-fundamentales\tc1031(portafolio_final)\act3.4\fecha.h
+	<iostream>
+	<vector>
+
+1602894665 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos-y-algoritmos-fundamentales\tc1031(portafolio_final)\act3.4\hora.cpp
+	<iostream>
+	"Hora.h"
+
+1602885343 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos-y-algoritmos-fundamentales\tc1031(portafolio_final)\act3.4\hora.h
+	<iostream>
+	<vector>
+
+1602892532 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos-y-algoritmos-fundamentales\tc1031(portafolio_final)\act3.4\registro.cpp
+	"Registro.h"
+	<iostream>
+
+1602890193 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos-y-algoritmos-fundamentales\tc1031(portafolio_final)\act3.4\registro.h
+	<string>
+	<iostream>
+	"Fecha.h"
+	"Hora.h"
+

@@ -1,0 +1,78 @@
+# depslib dependency file v1.0
+1584209020 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actvidad 2.2\main.cpp
+	<iostream>
+
+1602719649 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actvidad 2.2\fecha.cpp
+	"Fecha.h"
+
+1602719792 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actvidad 2.2\fecha.h
+	<iostream>
+
+1602719643 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actvidad 2.2\conexionescomputadora.cpp
+	"ConexionesComputadora.h"
+	<fstream>
+	<sstream>
+
+1602719655 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actvidad 2.2\conexionescomputadora.h
+	<stdio.h>
+	<iostream>
+	<queue>
+	<stack>
+	"Registro.h"
+
+1602719822 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actvidad 2.2\registro.h
+	<string>
+	<iostream>
+	"Fecha.h"
+
+1602719759 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actvidad 2.2\registro.cpp
+	"Registro.h"
+	<iostream>
+
+1602891143 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\reto2\actvidad 2.2\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1602891093 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\reto2\actvidad 2.2\fecha.h
+	<iostream>
+	<vector>
+
+1602896132 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\reto2\actvidad 2.2\registro.cpp
+	"Registro.h"
+	<iostream>
+
+1602893793 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\reto2\actvidad 2.2\registro.h
+	<string>
+	<iostream>
+	"Fecha.h"
+	"Hora.h"
+
+1602897841 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\reto2\actvidad 2.2\conexionescomputadora.cpp
+	"ConexionesComputadora.h"
+	<fstream>
+	<sstream>
+	<string>
+
+1602897671 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\reto2\actvidad 2.2\conexionescomputadora.h
+	<stdio.h>
+	<iostream>
+	<vector>
+	<queue>
+	<stack>
+	"Registro.h"
+	"Fecha.h"
+
+1602899296 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\reto2\actvidad 2.2\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"ConexionesComputadora.h"
+
+1602898265 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\reto2\actvidad 2.2\hora.cpp
+	<iostream>
+	"Hora.h"
+
+1602888943 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\tc1031(portafolio_final)\reto2\actvidad 2.2\hora.h
+	<iostream>
+	<vector>
+

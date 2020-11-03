@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1602246449 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\queueenclase\queue\main.cpp
+	<iostream>
+	"Queue.h"
+
+1602249363 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\queueenclase\queue\queue.h
+	<iostream>
+	"D:\Universidad\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\3er Semestre\Estructuras de Datos\ListaEnlazadaProfe\LinkedList.h"
+
+1602246365 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\queueenclase\queue\linkedlist.h
+	<ostream>
+	"Node.h"
+
+1601434333 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\queueenclase\queue\node.h
+	<iostream>
+
+1602249248 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\listaenlazadaprofe\linkedlist.h
+	<iostream>
+	"Node.h"
+
+1602249247 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\listaenlazadaprofe\node.h
+	<iostream>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1597717571 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\ejerciciosrecursividadclase2\main.cpp
+	<iostream>
+	<cstdlib>
+	<vector>
+	<time.h>
+

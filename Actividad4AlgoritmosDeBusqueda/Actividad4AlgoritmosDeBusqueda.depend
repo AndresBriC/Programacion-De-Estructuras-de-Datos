@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1599282200 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actividad4algoritmosdebusqueda\main.cpp
+	<iostream>
+	<algorithm>
+	<time.h>
+	<chrono>
+	<iterator>
+	<vector>
+	"Ordenamiento.h"
+
+1599280809 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\actividad4algoritmosdebusqueda\ordenamiento.h
+	<iostream>
+	<vector>
+

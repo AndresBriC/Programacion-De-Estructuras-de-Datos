@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1601646501 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\listaenlazadaenclase\main.cpp
+	<iostream>
+	"Node.h"
+	"LinkedList.h"
+
+1601434333 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\listaenlazadaenclase\node.h
+	<iostream>
+
+1601646717 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\listaenlazadaenclase\linkedlist.h
+	<ostream>
+	"Node.h"
+

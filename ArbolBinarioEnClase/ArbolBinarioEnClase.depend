@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1603510609 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\arbolbinarioenclase\main.cpp
+	<iostream>
+	"BinaryTree.h"
+	"TreeNode.h"
+	"BST.h"
+
+1603199338 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\arbolbinarioenclase\treenode.h
+	<iostream>
+
+1603495424 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\arbolbinarioenclase\binarytree.h
+	<iostream>
+	"TreeNode.h"
+
+1603195706 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\arbolbinarioenclase\bst.cpp
+
+1603510317 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\arbolbinarioenclase\bst.h
+	"BinaryTree.h"
+
