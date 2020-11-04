@@ -21,7 +21,7 @@ Registro::Registro(){
     nombreDestino = "";
 }
 
-Registro::Registro(Fecha cFecha, string cHora, string cIpOrigen, string cPuertoOrigen, string cNombreOrigen, string cIpDestino, int cPuertoDestino, string cNombreDestino){
+Registro::Registro(Fecha cFecha, Hora cHora, string cIpOrigen, string cPuertoOrigen, string cNombreOrigen, string cIpDestino, int cPuertoDestino, string cNombreDestino){
     fecha = cFecha;
     hora = cHora;
     ipOrigen = cIpOrigen;
@@ -51,7 +51,7 @@ Fecha Registro::getFecha(){
     return fecha;
 }
 
-string Registro::getHora(){
+Hora Registro::getHora(){
     return hora;
 }
 
@@ -84,7 +84,7 @@ void Registro::setFecha(Fecha sFecha){
     fecha = sFecha;
 }
 
-void Registro::setHora(string sHora){
+void Registro::setHora(Hora sHora){
     hora = sHora;
 }
 

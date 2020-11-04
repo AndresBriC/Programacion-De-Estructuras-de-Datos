@@ -19,7 +19,7 @@ using namespace std;
 class Registro{
 private:
     Fecha fecha;
-    string hora; //Datos de tiempo
+    Hora hora; //Datos de tiempo
     string ipOrigen, puertoOrigen, nombreOrigen; //Datos de origen
     string ipDestino, nombreDestino;//Datos de destino
     int puertoDestino;
@@ -27,11 +27,11 @@ private:
 public:
     //Constructores
     Registro();
-    Registro(Fecha cFecha, string cHora, string cIpOrigen, string cPuertoOrigen, string cNombreOrigen, string cIpDestino, int cPuertoDestino, string cNombreDestino);
+    Registro(Fecha cFecha, Hora cHora, string cIpOrigen, string cPuertoOrigen, string cNombreOrigen, string cIpDestino, int cPuertoDestino, string cNombreDestino);
 
     //Accesors
     Fecha getFecha();
-    string getHora();
+    Hora getHora();
     string getIpOrigen();
     string getPuertoOrigen();
     string getNombreOrigen();
@@ -41,7 +41,7 @@ public:
 
     //Mutators
     void setFecha(Fecha sFecha);
-    void setHora(string sHora);
+    void setHora(Hora sHora);
     void setIpOrigen(string sIpOrigen);
     void setPuertoOrigen(string sPuertoOrigen);
     void setNombreOrigen(string sNombreOrigen);

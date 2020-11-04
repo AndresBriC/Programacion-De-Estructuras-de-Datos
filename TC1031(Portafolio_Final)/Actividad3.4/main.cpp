@@ -89,7 +89,7 @@ Fecha StringToFecha(string fechaATransformar){
 vector<Registro> lecturaArchivo(){
     //Para lectura del csv
     ifstream archivo;
-    archivo.open("/Users/inigo/Desktop/Semstre 3/Estructuras de datos/TC1031(Portafolio_FInal)/Act_3.4/Act_3.4/equipo6.csv");
+    archivo.open("equipo6.csv");
     string line;
 
     //Vector que contiene todos los registros con sus datos almecenados en diferentes strings
@@ -97,8 +97,9 @@ vector<Registro> lecturaArchivo(){
 
     //Vatiables para almacenar los datos de cada registro
     string fechaString = "";
+    string horaString = "";
     Fecha fecha;
-    string hora = "";
+    Hora hora;
     string ipOrigen = "";
     string puertoOrigen = "";
     string nombreOrigen = "";
@@ -116,7 +117,7 @@ vector<Registro> lecturaArchivo(){
 
         //Lectura antes de cada coma y alacenamiento temporal en variable para cada dato
         getline(ss, fechaString, ',');
-        getline(ss, hora, ',');
+        getline(ss, horaString, ',');
         getline(ss, ipOrigen, ',');
         getline(ss, puertoOrigen, ',');
         getline(ss, nombreOrigen, ',');
@@ -125,7 +126,8 @@ vector<Registro> lecturaArchivo(){
         ss >> puertoDestino;
         ss >> nombreDestino;
 
-        fecha = StringToFecha(fechaString); //Convierte la fecha de formato string a objeto fecha
+        fecha = fecha.stringToFecha(fechaString); //Convierte la fecha de formato string a objeto fecha
+        hora = hora.stringToHora(horaString); //Convierte la hora de formato string a objeto hora
 
         //Crea un nuevo objeto al final del vector con los datos leidos previamente
         listaRegistros.push_back(Registro(fecha, hora, ipOrigen, puertoOrigen, nombreOrigen, ipDestino, puertoDestino, nombreDestino));
@@ -157,12 +159,13 @@ map<string, int> conexionesPorDia (Fecha fecha){
     int count = 0;
     string sitio;
     map<string, int> conexiones;
+    int registrosFechaSize = registrosFecha.size();
 
     //Se repite hasta que el vector esté vacío
     while (registrosFecha.size() != 0){
         count = 0;
         sitio = registrosFecha[0].getNombreDestino(); //Usa el primer registro como referencia
-        for (int i = 0; i < registrosFecha.size(); i++){
+        for (int i = 0; i < registrosFechaSize; i++){
             //Cuenta cuántas veces está ese sitio y elimina del vector cada registro de el sitio
             if (registrosFecha[i].getNombreDestino() == sitio){
                 registrosFecha.erase(registrosFecha.begin() + i);
