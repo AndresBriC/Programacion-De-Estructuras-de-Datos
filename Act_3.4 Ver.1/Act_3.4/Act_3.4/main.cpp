@@ -1,3 +1,10 @@
+//
+//  main.cpp
+//  Act_3.4
+//
+//  Created by inigo guerra on 03/11/20.
+//
+
 #include <iostream>
 #include <map>
 #include <fstream>
@@ -119,25 +126,25 @@ vector<Registro> lecturaArchivo(){
         ss >> nombreDestino;
 
         fecha = StringToFecha(fechaString); //Convierte la fecha de formato string a objeto fecha
-
+        
         //Crea un nuevo objeto al final del vector con los datos leidos previamente
         listaRegistros.push_back(Registro(fecha, hora, ipOrigen, puertoOrigen, nombreOrigen, ipDestino, puertoDestino, nombreDestino));
 
         linecount++; //Agrega 1 al contador por cada linea
     }
-
+    
     return listaRegistros;
 }
 
 map<string, int> conexionesPorDia (Fecha fecha){
     vector<Registro> registrosFecha;
-
+    
     vector<Registro> registros = lecturaArchivo();
-
+    
     long int sizeR = registros.size();
     int i = 0;
     Fecha fechaT;
-
+    
     //Agrega todos los registros con la fecha indicada y que no pertenezcan a "-" o a reto.com a un vector
     while ((i < sizeR) && !(fechaT > fecha)){
         fechaT = registros[i].getFecha();
@@ -146,28 +153,28 @@ map<string, int> conexionesPorDia (Fecha fecha){
         }
         i++;
     }
-
+    
     int count = 0;
     string sitio;
     map<string, int> conexiones;
-
-    //Se repite hasta que el vector esté vacío
+    
+    //Se repite hasta que el vector estÃ© vacÃ­o
     while (registrosFecha.size() != 0){
         count = 0;
         sitio = registrosFecha[0].getNombreDestino(); //Usa el primer registro como referencia
         for (int i = 0; i < registrosFecha.size(); i++){
-            //Cuenta cuántas veces está ese sitio y elimina del vector cada registro de el sitio
+            //Cuenta cuÃ¡ntas veces estÃ¡ ese sitio y elimina del vector cada registro de el sitio
             if (registrosFecha[i].getNombreDestino() == sitio){
                 registrosFecha.erase(registrosFecha.begin() + i);
                 count++;
             }
         }
-        //Crea un par con el número de veces que se encuentra el sitio y el nombre del sitio
+        //Crea un par con el nÃºmero de veces que se encuentra el sitio y el nombre del sitio
         pair<string, int> conexionesSitio(sitio, count);
         //Agrega el par al mapa
         conexiones.insert(conexionesSitio);
     }
-
+    
     return conexiones;
 }
 

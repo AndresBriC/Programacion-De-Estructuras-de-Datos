@@ -1,5 +1,12 @@
-#ifndef FECHA_H_INCLUDED
-#define FECHA_H_INCLUDED
+//
+//  Fecha.hpp
+//  Act_3.4
+//
+//  Created by inigo guerra on 03/11/20.
+//
+
+#ifndef Fecha_hpp
+#define Fecha_hpp
 
 #include <iostream>
 #include <vector>

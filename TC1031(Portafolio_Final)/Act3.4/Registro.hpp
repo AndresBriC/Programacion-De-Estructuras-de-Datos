@@ -1,26 +1,25 @@
 //
-//  Registro.h
-//  Act 1.3
+//  Registro.hpp
+//  Act_3.4
 //
-//  Created by inigo guerra on 22/09/20.
-//  Copyright © 2020 inigo guerra. All rights reserved.
+//  Created by inigo guerra on 03/11/20.
 //
 
-#ifndef REGISTRO_H_INCLUDED
-#define REGISTRO_H_INCLUDED
+#ifndef Registro_hpp
+#define Registro_hpp
 
 #include <string>
 #include <iostream>
 
-#include "Fecha.h"
-#include "Hora.h"
+#include "Fecha.hpp"
+#include "Hora.hpp"
 
 using namespace std;
 
 class Registro{
 private:
     Fecha fecha;
-    Hora hora; //Datos de tiempo
+    string hora; //Datos de tiempo
     string ipOrigen, puertoOrigen, nombreOrigen; //Datos de origen
     string ipDestino, nombreDestino;//Datos de destino
     int puertoDestino;
@@ -28,11 +27,11 @@ private:
 public:
     //Constructores
     Registro();
-    Registro(Fecha cFecha, Hora cHora, string cIpOrigen, string cPuertoOrigen, string cNombreOrigen, string cIpDestino, int cPuertoDestino, string cNombreDestino);
+    Registro(Fecha cFecha, string cHora, string cIpOrigen, string cPuertoOrigen, string cNombreOrigen, string cIpDestino, int cPuertoDestino, string cNombreDestino);
 
     //Accesors
     Fecha getFecha();
-    Hora getHora();
+    string getHora();
     string getIpOrigen();
     string getPuertoOrigen();
     string getNombreOrigen();
@@ -42,7 +41,7 @@ public:
 
     //Mutators
     void setFecha(Fecha sFecha);
-    void setHora(Hora sHora);
+    void setHora(string sHora);
     void setIpOrigen(string sIpOrigen);
     void setPuertoOrigen(string sPuertoOrigen);
     void setNombreOrigen(string sNombreOrigen);
@@ -56,4 +55,3 @@ public:
 };
 
 #endif // REGISTRO_H_INCLUDED
-
