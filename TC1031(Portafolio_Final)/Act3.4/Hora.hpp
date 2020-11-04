@@ -1,5 +1,12 @@
-#ifndef HORA_H_INCLUDED
-#define HORA_H_INCLUDED
+//
+//  Hora.hpp
+//  Act_3.4
+//
+//  Created by inigo guerra on 03/11/20.
+//
+
+#ifndef Hora_hpp
+#define Hora_hpp
 
 #include <iostream>
 #include <vector>
@@ -38,4 +45,4 @@ public:
 
 };
 
-#endif // HORA_H_INCLUDED
+#endif /* Hora_hpp */
