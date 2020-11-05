@@ -11,6 +11,7 @@
 #include <sstream>
 #include <vector>
 #include "Registro.hpp"
+
 using namespace std;
 
 //Lectura archivo, regresa un vector con todos los registros
@@ -61,6 +62,45 @@ vector<Registro> lecturaArchivo(){
     return listaRegistros;
 }
 
+//Lectura archivo, regresa un vector cada fecha unica
+vector<Fecha> getEachUniqueDate(){
+    //Para lectura del csv
+    ifstream archivo;
+    archivo.open("equipo6.csv");
+    string line;
+
+    //Vector que contiene todos los registros con sus datos almecenados en diferentes strings
+    vector<Fecha> listaFechas;
+
+    //Vatiables para almacenar los datos de cada registro
+    string fechaString = "";
+    Fecha fecha;
+
+    //Lectura de cada lina del csv
+    while(getline(archivo, line)){
+
+        stringstream ss(line); //(Tomado del ejemplo del github del profe [Investigar como funciona])
+
+        //Lectura antes de cada coma y alacenamiento temporal en variable para cada dato
+        getline(ss, fechaString, ',');
+
+        fecha = fecha.stringToFecha(fechaString); //Convierte la fecha de formato string a objeto fecha
+
+        if(listaFechas.empty()){
+            //Crea un nuevo objeto al final del vector con los datos leidos previamente
+            listaFechas.push_back(fecha);
+            //cout << fecha << endl; //Debug
+        }
+        else if(listaFechas.back() != fecha){
+            //Crea un nuevo objeto al final del vector con los datos leidos previamente
+            listaFechas.push_back(fecha);
+            //cout << fecha << endl; //Debug
+        }
+    }
+
+    return listaFechas;
+}
+
 map<string, int> conexionesPorDia (Fecha fecha){
     vector<Registro> registrosFecha;
 
@@ -82,13 +122,12 @@ map<string, int> conexionesPorDia (Fecha fecha){
     int count = 0;
     string sitio;
     map<string, int> conexiones;
-    int registrosFechaSize = registrosFecha.size();
 
     //Se repite hasta que el vector esté vacío
     while (registrosFecha.size() != 0){
         count = 0;
         sitio = registrosFecha[0].getNombreDestino(); //Usa el primer registro como referencia
-        for (int i = 0; i < registrosFechaSize; i++){
+        for (int i = 0; i < registrosFecha.size(); i++){
             //Cuenta cuántas veces está ese sitio y elimina del vector cada registro de el sitio
             if (registrosFecha[i].getNombreDestino() == sitio){
                 registrosFecha.erase(registrosFecha.begin() + i);
@@ -120,14 +159,14 @@ multimap<V,K, greater <int> > invertMap(map<K,V> const &map){ //El greater <int>
 
 void top(int n, Fecha myFecha){
 
-    map<string, int> conexiones = conexionesPorDia(myFecha);
-    multimap<int, string, greater <int> > testMultimap = invertMap(conexiones);
+    map<string, int> conexiones = conexionesPorDia(myFecha); //Obtiene la lista de conexiones del dia indicado
+    multimap<int, string, greater <int> > testMultimap = invertMap(conexiones); //Obtiene la lista ordenada descendientemente de las conexiones del dia
 
     int counter = 0;
 
-    for (auto const &pair : testMultimap){
+    for (auto const &pair : testMultimap){ //Por cada par en el multimap
         if(counter < n){
-            cout << pair.second << "," << pair.first << endl;
+            cout << pair.second << "," << pair.first << endl; //Imprime el sitio y luego el numero de conexiones
             counter++;
         }
         else{
@@ -141,6 +180,7 @@ int main(int argc, const char * argv[]) {
     Fecha fecha(10, 8, 2020);
     map<string, int> conexiones = conexionesPorDia(fecha);
 
+    //Prueba top
     int primerosN, topDia, topMes, topAnio;
 
     cout << "Cuantos sitios de los sitios mas accesados en orden deseas ver? ";
@@ -155,6 +195,18 @@ int main(int argc, const char * argv[]) {
     Fecha topFecha(topDia, topMes, topAnio);
 
     top(primerosN, topFecha);
+
+    vector<Fecha> uniqueDateVector = getEachUniqueDate();
+    Fecha currentDate = fecha;
+    int uniqueDateVectorSize = uniqueDateVector.size();
+
+    //Top 5 de cada dia
+    for(int i = 0; i < uniqueDateVectorSize; i++){
+        currentDate = uniqueDateVector[i];
+        cout << endl;
+        cout << currentDate << endl;
+        top(5, currentDate);
+    }
 
 //    for (auto elem : conexiones) {
 //            cout << "Key: " << elem.first << ", Value: " << elem.second << endl;

@@ -32,6 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BST.h" />
+		<Unit filename="BinaryTree.h" />
+		<Unit filename="Fecha.cpp" />
+		<Unit filename="Fecha.hpp" />
+		<Unit filename="Hora.cpp" />
+		<Unit filename="Hora.hpp" />
+		<Unit filename="Ordenamiento.h" />
+		<Unit filename="Registro.cpp" />
+		<Unit filename="Registro.hpp" />
+		<Unit filename="TreeNode.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
