@@ -62,6 +62,11 @@ int Fecha::getAnio(){
     return anio;
 }
 
+Fecha Fecha::getFecha(){
+    Fecha fecha(dia, mes, anio);
+    return fecha;
+}
+
 //Mutators
 void Fecha::setDia(int mDia){
     dia = mDia;
@@ -72,6 +77,12 @@ void Fecha::setMes(int mMes){
 }
 
 void Fecha::setAnio(int mAnio){
+    anio = mAnio;
+}
+
+void Fecha::setFecha(int mDia, int mMes, int mAnio){
+    dia = mDia;
+    mes = mMes;
     anio = mAnio;
 }
 

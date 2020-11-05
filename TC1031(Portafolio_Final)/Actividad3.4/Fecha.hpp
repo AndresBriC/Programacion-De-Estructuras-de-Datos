@@ -26,11 +26,13 @@ public:
     int getDia();
     int getMes();
     int getAnio();
+    Fecha getFecha();
 
     //Mutators
     void setDia(int mDia);
     void setMes(int mMes);
     void setAnio(int mAnio);
+    void setFecha(int mDia, int mMes, int mAnio);
 
     //Sobrecarga de operadores
     friend ostream & operator<<(ostream & os, const Fecha & fecha);
