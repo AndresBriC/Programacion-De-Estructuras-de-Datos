@@ -104,6 +104,10 @@ map<string, int> conexionesPorDia (Fecha fecha){
     return conexiones;
 }
 
+void top(int n, Fecha myFecha){
+
+}
+
 int main(int argc, const char * argv[]) {
     Fecha fecha(10, 8, 2020);
     map<string, int> conexiones = conexionesPorDia(fecha);
