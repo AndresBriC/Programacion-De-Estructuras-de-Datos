@@ -13,78 +13,6 @@
 #include "Registro.hpp"
 using namespace std;
 
-//Convierte un vector de caracteres a una string
-string vectorToString(vector<char> vectToConv){
-    string s(vectToConv.begin(), vectToConv.end());
-
-    return s;
-}
-
-Fecha StringToFecha(string fechaATransformar){
-
-    //Almacena los tamanios del string de la fecha en un int
-    long int FechaSize = fechaATransformar.size();
-
-    //Crea array de caracteres para la primera fecha y lo copia
-    char charFecha[FechaSize + 1];
-    fechaATransformar.copy(charFecha, FechaSize + 1);
-
-    //Vectores para almacenar dia, mes y anio
-    vector<char> diaTemp;
-    vector<char> mesTemp;
-    vector<char> anioTemp;
-
-    //Ints para almacenar dias, meses y anios finales
-    int dia = 0;
-    int mes = 0;
-    int anio = 0;
-
-    //Variables usadas en el for para seaparar dia, mes y anio
-    int contadorGuion = 0;//Para detectar cual guion se esta leyendo
-    vector<char> contenedorFechas; //Para almacenar el dia/mes/anio temporalmente
-
-    //Separa dia, mes y anio y las pone en vectores
-    for(int i = 0; i < FechaSize; i++){
-
-        //cout << charPrimeraFecha[i]; //Debug
-
-        //Checa en que guion de la fecha va en el array
-        if(charFecha[i] == '-'){
-            contadorGuion++;
-        }
-
-        //Agrega la parte del dia a un vector
-        if(charFecha[i] != '-' && contadorGuion == 0){
-            diaTemp.push_back(charFecha[i]);
-        }
-
-        //Agrega la parte del mes a un vector
-        if(charFecha[i] != '-' && contadorGuion == 1){
-            mesTemp.push_back(charFecha[i]);
-        }
-
-        //Agrega la parte del anio a un vector
-        if(charFecha[i] != '-' && contadorGuion == 2){
-            anioTemp.push_back(charFecha[i]);
-        }
-    }
-
-    string tempString; //Para almacenar los strings que se van a convertir a ints
-
-    //Vector a integer
-    tempString = vectorToString(diaTemp); //Dia
-    dia = stoi(tempString);
-    tempString = vectorToString(mesTemp); //Mes
-    mes = stoi(vectorToString(mesTemp));
-    tempString = vectorToString(anioTemp); //Anio
-    anio = stoi(vectorToString(anioTemp));
-
-    //Objeto de tipo fecha a regresar
-    Fecha fechaToReturn(dia, mes, anio);
-
-    return fechaToReturn;
-}
-
 //Lectura archivo, regresa un vector con todos los registros
 vector<Registro> lecturaArchivo(){
     //Para lectura del csv
@@ -107,9 +35,6 @@ vector<Registro> lecturaArchivo(){
     int puertoDestino = 0;
     string nombreDestino = "";
 
-    //Para responeder las preguntas
-    int linecount = 0; //Cuenta el numero de lineas (registros)
-
     //Lectura de cada lina del csv
     while(getline(archivo, line)){
 
@@ -131,8 +56,6 @@ vector<Registro> lecturaArchivo(){
 
         //Crea un nuevo objeto al final del vector con los datos leidos previamente
         listaRegistros.push_back(Registro(fecha, hora, ipOrigen, puertoOrigen, nombreOrigen, ipDestino, puertoDestino, nombreDestino));
-
-        linecount++; //Agrega 1 al contador por cada linea
     }
 
     return listaRegistros;

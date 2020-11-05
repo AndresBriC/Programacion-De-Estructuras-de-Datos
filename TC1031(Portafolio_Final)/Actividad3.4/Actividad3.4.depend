@@ -15,7 +15,7 @@
 	<iostream>
 	<vector>
 
-1604524591 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\main.cpp
+1604528738 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\main.cpp
 	<iostream>
 	<map>
 	<fstream>
@@ -23,13 +23,13 @@
 	<vector>
 	"Registro.hpp"
 
-1604524156 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\registro.hpp
+1604525755 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\registro.hpp
 	<string>
 	<iostream>
 	"Fecha.hpp"
 	"Hora.hpp"
 
-1604524156 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\registro.cpp
+1604525755 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\registro.cpp
 	"Registro.hpp"
 	<iostream>
 
