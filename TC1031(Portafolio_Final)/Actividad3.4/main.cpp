@@ -73,7 +73,7 @@ map<string, int> conexionesPorDia (Fecha fecha){
     //Agrega todos los registros con la fecha indicada y que no pertenezcan a "-" o a reto.com a un vector
     while ((i < sizeR) && !(fechaT > fecha)){
         fechaT = registros[i].getFecha();
-        if ((registros[i].getFecha() == fecha) && (registros[i].getNombreDestino() != ",-") && (registros[i].getNombreDestino() != "reto.com")){
+        if ((registros[i].getFecha() == fecha) && (registros[i].getNombreDestino() != ",-") && (registros[i].getNombreDestino() != ",reto.com") && (registros[i].getNombreDestino() != ",server.reto.com") ){
             registrosFecha.push_back(registros[i]);
         }
         i++;
@@ -104,15 +104,61 @@ map<string, int> conexionesPorDia (Fecha fecha){
     return conexiones;
 }
 
+//Ordena el mapa dado de forma descendiente. Tomado de: https://www.techiedelight.com/sort-map-values-cpp
+//Convierte el mapa<K,V> a un multimapa<V,K>
+template<typename K, typename V>
+multimap<V,K, greater <int> > invertMap(map<K,V> const &map){ //El greater <int> asegura que se ordene en orden descendiente
+
+    multimap<V,K, greater <int> > mMultimap;
+
+    for(auto const &pair : map){
+        mMultimap.insert(make_pair(pair.second, pair.first)); //Usando los valores del mapa dado, inserta los valores de manera invertida, para que ser vayan ordenando descendientemente
+    }
+
+    return mMultimap;
+}
+
 void top(int n, Fecha myFecha){
 
+    map<string, int> conexiones = conexionesPorDia(myFecha);
+    multimap<int, string, greater <int> > testMultimap = invertMap(conexiones);
+
+    int counter = 0;
+
+    for (auto const &pair : testMultimap){
+        if(counter < n){
+            cout << pair.second << "," << pair.first << endl;
+            counter++;
+        }
+        else{
+            break;
+        }
+    }
 }
+
 
 int main(int argc, const char * argv[]) {
     Fecha fecha(10, 8, 2020);
     map<string, int> conexiones = conexionesPorDia(fecha);
-    for (auto elem : conexiones) {
-            cout << "Key: " << elem.first << ", Value: " << elem.second << endl;
-        }
+
+    int primerosN, topDia, topMes, topAnio;
+
+    cout << "Cuantos sitios de los sitios mas accesados en orden deseas ver? ";
+    cin >> primerosN;
+    cout << "De que dia? ";
+    cin >> topDia;
+    cout << "De que mes? ";
+    cin >> topMes;
+    cout << "De que anio? ";
+    cin >> topAnio;
+    cout << endl;
+    Fecha topFecha(topDia, topMes, topAnio);
+
+    top(primerosN, topFecha);
+
+//    for (auto elem : conexiones) {
+//            cout << "Key: " << elem.first << ", Value: " << elem.second << endl;
+//    }
+
     return 0;
 }
