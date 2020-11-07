@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1604673521 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\matrizadyacencia\main.cpp
+	<iostream>
+	<vector>
+	<iterator>
+	<algorithm>
+	"Ciudad.h"
+
+1604671865 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\matrizadyacencia\ciudad.cpp
+	<iostream>
+	"Ciudad.h"
+
+1604671557 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\matrizadyacencia\ciudad.h
+	<string>
+
