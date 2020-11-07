@@ -2,6 +2,9 @@
 #define BST_H_INCLUDED
 
 #include "BinaryTree.h"
+#include <map>
+#include <utility>
+#include <string>
 
 template <class T>
 class BST : public BinaryTree<T>{
@@ -11,8 +14,12 @@ public:
     virtual ~BST() {};
 
     TreeNode<T> *search(const T &) const;
+
     bool insert(T &);
     bool insert(TreeNode<T> *);
+
+    bool insertPair(TreeNode<T> *);
+    bool insertPair(T, int);
 
     //Metodos opreraciones avanzadas BST
 
@@ -61,6 +68,11 @@ bool BST<T>::insert(T &value){
 }
 
 template <class T>
+bool BST<T>::insertPair(T _key, int _value){
+    return this->insertPair(new TreeNode<T>(_key, _value));
+}
+
+template <class T>
 bool BST<T>::insert(TreeNode<T> *node){
 
     //No se puede insertar un nodo nulo
@@ -102,6 +114,48 @@ bool BST<T>::insert(TreeNode<T> *node){
     return true;
 }
 
+template <class T>
+bool BST<T>::insertPair(TreeNode<T> *node){
+
+    //No se puede insertar un nodo nulo
+    if(node == nullptr) return false;
+
+    int value = node->getPairValue(); //Obtener la info del nodo a insertar
+    TreeNode<T> *aux =  this->root; //Nodo auxiliar en la raiz
+    TreeNode<T> *parent = nullptr; //Establece una variable para el padre
+
+    //Busca la posicion que le corresponde
+    while(aux != nullptr){
+        if(aux->getPairValue() == value){
+            delete node;
+            return false;
+        }
+        else{
+            parent = aux;
+            aux = aux->getPairValue() > value ? aux->getLeft() : aux->getRight();
+        }
+    }
+
+    node->setParent(parent); //Establece el parent del nodo a insertar
+
+    //Si el arbol esta vacio se inserta en la raiz
+    if (parent == nullptr){
+        this->root = node;
+    }
+    else{
+        //Si el value es menor, se inserta a la izquierda
+        if(parent->getPairValue() > value){
+            parent->setLeft(node);
+        }
+        //Si el value a insertar es mayor, se inserta a la derecha
+        else{
+            parent->setRight(node);
+        }
+    }
+
+    return true;
+}
+
 //Metodos de operaciones avanzadas
 
 //Desplega los datos del BST dependiendo del numero entrado
@@ -120,6 +174,10 @@ void BST<T>::visit(int orderType){
     case 4: //Level by level
         this->printLevelByLevel(this->root);
         break;
+    case 5: //Postorder
+        this->inOrdenDesc();
+        break;
+
     default:
         std::cout << "Se debe indicar un numero entre 1 y 4 para el tipo de display" << std::endl;
     }

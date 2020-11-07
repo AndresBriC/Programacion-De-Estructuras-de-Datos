@@ -1,16 +1,15 @@
-#ifndef TREENODE_H_INCLUDED
-#define TREENODE_H_INCLUDED
+#ifndef MAPTREENODE_H_INCLUDED
+#define MAPTREENODE_H_INCLUDED
 
 #include <iostream>
-#include <utility>
+#include <map>
 
-template <class T>
 class TreeNode {
 private:
-    T info;
-    int pairValue;
+     info;
     TreeNode<T> * left = nullptr;
     TreeNode<T> * right = nullptr;
+
     TreeNode<T> *parent = nullptr;
 
 public:
@@ -18,7 +17,6 @@ public:
     TreeNode() { };
     TreeNode(const T & _info) : info(_info) {}
     TreeNode(const TreeNode<T> & );
-    TreeNode(T, int);
 
     /* Destructor */
     virtual ~TreeNode();
@@ -26,9 +24,6 @@ public:
     /* Getter y Setter */
     T getInfo() const { return info; }
     void setInfo(T & value) { info = value; }
-
-    int getPairValue() const { return pairValue; }
-    void setPairValue(int & _pairValue) { pairValue = _pairValue; }
 
     TreeNode<T> * getLeft() const { return left; }
     void setLeft(TreeNode<T> * value) { left = value; }
@@ -57,13 +52,6 @@ TreeNode<T>::TreeNode(const TreeNode<T> & other)
 }
 
 template <class T>
-TreeNode<T>::TreeNode(T _key, int _value)
-{
-    info = _key;
-    pairValue = _value;
-}
-
-template <class T>
 TreeNode<T>::~TreeNode()
 {
     info.~T();
@@ -81,10 +69,9 @@ bool TreeNode<T>::operator ==(TreeNode<T> & other)
 template <class T>
 std::ostream & operator << (std::ostream & os, const TreeNode<T> & node)
 {
-    os << node.info << ", ";
-    os << node.pairValue;
+    os << node.info;
 
     return os;
 }
 
-#endif // TREENODE_H_INCLUDED
+#endif // MAPTREENODE_H_INCLUDED

@@ -10,7 +10,9 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+
 #include "Registro.hpp"
+#include "BST.h"
 
 using namespace std;
 
@@ -175,42 +177,74 @@ void top(int n, Fecha myFecha){
     }
 }
 
+void topBST(int n, Fecha myFecha){
+
+    map<string, int> conexiones = conexionesPorDia(myFecha); //Obtiene la lista de conexiones del dia indicado
+    BST<string> arbolConexiones;
+    string key;
+    int value;
+
+    for(auto elem : conexiones){
+        key = elem.first;
+        value = elem.second;
+        arbolConexiones.insertPair(key, value);
+    }
+
+    arbolConexiones.visit(5);
+}
+
 
 int main(int argc, const char * argv[]) {
-    Fecha fecha(10, 8, 2020);
-    map<string, int> conexiones = conexionesPorDia(fecha);
+//    Fecha fecha(10, 8, 2020);
+//    map<string, int> conexiones = conexionesPorDia(fecha);
 
-    //Prueba top
-    int primerosN, topDia, topMes, topAnio;
+//    Despliegue del conteo total del día
+//    for (auto elem : conexiones) {
+//            cout << "Key: " << elem.first << ", Value: " << elem.second << endl;
+//    }
 
-    cout << "Cuantos sitios de los sitios mas accesados en orden deseas ver? ";
-    cin >> primerosN;
-    cout << "De que dia? ";
-    cin >> topDia;
-    cout << "De que mes? ";
-    cin >> topMes;
-    cout << "De que anio? ";
-    cin >> topAnio;
-    cout << endl;
-    Fecha topFecha(topDia, topMes, topAnio);
-
-    top(primerosN, topFecha);
+//    //Prueba top
+//    int primerosN, topDia, topMes, topAnio;
+//
+//    cout << "Cuantos sitios de los sitios mas accesados en orden deseas ver? ";
+//    cin >> primerosN;
+//    cout << "De que dia? ";
+//    cin >> topDia;
+//    cout << "De que mes? ";
+//    cin >> topMes;
+//    cout << "De que anio? ";
+//    cin >> topAnio;
+//    cout << endl;
+//    Fecha topFecha(topDia, topMes, topAnio);
+//
+//    top(primerosN, topFecha);
 
     vector<Fecha> uniqueDateVector = getEachUniqueDate();
-    Fecha currentDate = fecha;
+    Fecha currentDate;
     int uniqueDateVectorSize = uniqueDateVector.size();
 
-    //Top 5 de cada dia
+//    //Top 5 de cada dia
+//    for(int i = 0; i < uniqueDateVectorSize; i++){
+//        currentDate = uniqueDateVector[i];
+//        cout << endl;
+//        cout << currentDate << endl;
+//        top(5, currentDate);
+//    }
+
+    //Top 5 de cada dia usando un BST
     for(int i = 0; i < uniqueDateVectorSize; i++){
         currentDate = uniqueDateVector[i];
         cout << endl;
         cout << currentDate << endl;
-        top(5, currentDate);
+        topBST(5, currentDate);
     }
 
-//    for (auto elem : conexiones) {
-//            cout << "Key: " << elem.first << ", Value: " << elem.second << endl;
-//    }
+    //Top 5 todos los dias
+
+    //Sitio que aparezca en el top 5 y se quede
+
+    //Sitio von una con una cantidad mas trafico que lo normal
+
 
     return 0;
 }
