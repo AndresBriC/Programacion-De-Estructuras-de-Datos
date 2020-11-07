@@ -182,6 +182,24 @@ multimap<int, string, greater<int>> top(int n, Fecha myFecha){
     return top5Map;
 }
 
+void sitiosConMuchoTrafico(int n, Fecha myFecha){
+
+    map<string, int> conexiones = conexionesPorDia(myFecha); //Obtiene la lista de conexiones del dia indicado
+    multimap<int, string, greater <int> > testMultimap = invertMap(conexiones); //Obtiene la lista ordenada descendientemente de las conexiones del dia
+
+    int counter = 0;
+
+    for (auto const &pair : testMultimap){ //Por cada par en el multimap
+        if(counter < n && pair.first >= 100){
+            cout << pair.second << ", " << pair.first << endl; //Imprime el sitio y luego el numero de conexiones
+            counter++;
+        }
+        else{
+            break;
+        }
+    }
+}
+
 void topBST(int n, Fecha myFecha){
 
     map<string, int> conexiones = conexionesPorDia(myFecha); //Obtiene la lista de conexiones del dia indicado
@@ -245,6 +263,7 @@ int main(int argc, const char * argv[]) {
     }
 
 
+    //Chequeo del sitios en el top 5 todos los días
     vector <pair<string, int> > uniqueNameCounter; //Vector de repeticiones por sitio
     uniqueNameCounter.push_back(make_pair(repetitionCounter[0].second, 0));
 
@@ -266,7 +285,7 @@ int main(int argc, const char * argv[]) {
     }
 
     for(int i = 0; i < uniqueNameCounter.size(); i++){
-        cout << uniqueNameCounter[i].first << ", " << uniqueNameCounter[i].second << endl;
+        //cout << uniqueNameCounter[i].first << ", " << uniqueNameCounter[i].second << endl;
         if(uniqueNameCounter[i].second == uniqueDateVector.size()){
             cout << uniqueNameCounter[i].first << " se repite todos los dias." << endl;
         }
@@ -288,7 +307,14 @@ int main(int argc, const char * argv[]) {
     //Sitio que aparezca en el top 5 y se quede
 
     //Sitio von una con una cantidad mas trafico que lo normal
-
+    cout << "Los sitios con una cantidad mas alta de lo normal son: " << endl;
+    cout << endl;
+    for(int i = 0; i < uniqueDateVectorSize; i++){
+        currentDate = uniqueDateVector[i];
+        cout << endl;
+        cout << currentDate << endl;
+        sitiosConMuchoTrafico(5, currentDate);
+    }
 
     return 0;
 }
