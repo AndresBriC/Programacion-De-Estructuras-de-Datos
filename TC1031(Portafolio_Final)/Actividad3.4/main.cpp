@@ -10,6 +10,7 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include <utility>
 
 #include "Registro.hpp"
 #include "BST.h"
@@ -159,22 +160,26 @@ multimap<V,K, greater <int> > invertMap(map<K,V> const &map){ //El greater <int>
     return mMultimap;
 }
 
-void top(int n, Fecha myFecha){
+multimap<int, string, greater<int>> top(int n, Fecha myFecha){
 
     map<string, int> conexiones = conexionesPorDia(myFecha); //Obtiene la lista de conexiones del dia indicado
     multimap<int, string, greater <int> > testMultimap = invertMap(conexiones); //Obtiene la lista ordenada descendientemente de las conexiones del dia
+    multimap<int, string, greater<int>> top5Map;
 
     int counter = 0;
 
     for (auto const &pair : testMultimap){ //Por cada par en el multimap
         if(counter < n){
             cout << pair.second << "," << pair.first << endl; //Imprime el sitio y luego el numero de conexiones
+            top5Map.insert(make_pair(pair.first, pair.second));
             counter++;
         }
         else{
             break;
         }
     }
+
+    return top5Map;
 }
 
 void topBST(int n, Fecha myFecha){
@@ -190,7 +195,7 @@ void topBST(int n, Fecha myFecha){
         arbolConexiones.insertPair(key, value);
     }
 
-    arbolConexiones.visit(5);
+    arbolConexiones.visitTopN(n);
 }
 
 
@@ -221,23 +226,62 @@ int main(int argc, const char * argv[]) {
 
     vector<Fecha> uniqueDateVector = getEachUniqueDate();
     Fecha currentDate;
-    int uniqueDateVectorSize = uniqueDateVector.size();
 
-//    //Top 5 de cada dia
+    int uniqueDateVectorSize = uniqueDateVector.size(); //Vector que contiene cada sitio que sale en el top 5, contando repetidos
+
+    multimap<int, string, greater<int>> top5Map;
+    vector< pair<int, string> > repetitionCounter;
+
+    //Top 5 de cada dia
+    for(int i = 0; i < uniqueDateVectorSize; i++){
+        cout << endl;
+        currentDate = uniqueDateVector[i];
+        cout << currentDate << endl;
+        top5Map = top(5, currentDate); //Pone los top 5 en un multimapa
+
+        for(auto const &pair : top5Map){ //Pone los 5 del multimapa en un vector que contiene todos los top 5 con repetidos
+            repetitionCounter.push_back(make_pair(pair.first, pair.second));
+        }
+    }
+
+
+    vector <pair<string, int> > uniqueNameCounter; //Vector de repeticiones por sitio
+    uniqueNameCounter.push_back(make_pair(repetitionCounter[0].second, 0));
+
+    cout << endl;
+    for(int i = 0; i < repetitionCounter.size(); i++){
+        for(int j = 0; j < uniqueNameCounter.size(); j++){
+            if(uniqueNameCounter[j].first == repetitionCounter[i].second){ //Si el nombre ya esta en las dos listas
+                uniqueNameCounter[j].second++; //Le suma 1 al contador de repeticiones
+                break;
+                //cout << "Encontrado en la lista" uniqueNameCounter[j].first<< ", " << uniqueNameCounter[j].second<< endl;
+            }
+
+            if(j == uniqueNameCounter.size() - 1 && uniqueNameCounter[j].first != repetitionCounter[i].second){ //Si ya se llega al final y no coincide el nombre del sitio en las dos listas
+                uniqueNameCounter.push_back(make_pair(repetitionCounter[i].second, 1)); //Agrega el primer sitio web y pone su conteo de repeticion en 1
+                break;
+                //cout << "Encontrado por primera vez " << uniqueNameCounter[j].first<< ", " << uniqueNameCounter[j].second<< endl;
+            }
+        }
+    }
+
+    for(int i = 0; i < uniqueNameCounter.size(); i++){
+        cout << uniqueNameCounter[i].first << ", " << uniqueNameCounter[i].second << endl;
+        if(uniqueNameCounter[i].second == uniqueDateVector.size()){
+            cout << uniqueNameCounter[i].first << " se repite todos los dias." << endl;
+        }
+    }
+
+
+
+//    //Top 5 de cada dia usando un BST
 //    for(int i = 0; i < uniqueDateVectorSize; i++){
 //        currentDate = uniqueDateVector[i];
 //        cout << endl;
 //        cout << currentDate << endl;
-//        top(5, currentDate);
+//        topBST(5, currentDate);
 //    }
 
-    //Top 5 de cada dia usando un BST
-    for(int i = 0; i < uniqueDateVectorSize; i++){
-        currentDate = uniqueDateVector[i];
-        cout << endl;
-        cout << currentDate << endl;
-        topBST(5, currentDate);
-    }
 
     //Top 5 todos los dias
 

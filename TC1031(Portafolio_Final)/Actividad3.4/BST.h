@@ -28,6 +28,8 @@ public:
     void printLevel(TreeNode<T> *, int);
     void printLevelByLevel(TreeNode<T> *);
 
+    void visitTopN(int);
+
     //Height: complejidad lineal
     int height(); //Regresa la altura del BST
     int height(TreeNode<T> *); //Regresa la altura del BST
@@ -174,13 +176,14 @@ void BST<T>::visit(int orderType){
     case 4: //Level by level
         this->printLevelByLevel(this->root);
         break;
-    case 5: //Postorder
-        this->inOrdenDesc();
-        break;
-
     default:
         std::cout << "Se debe indicar un numero entre 1 y 4 para el tipo de display" << std::endl;
     }
+}
+
+template <class T>
+void BST<T>::visitTopN(int nPrimeros){
+    this->inOrdenDescTop(nPrimeros);
 }
 
 //Con apoyo de: https://www.geeksforgeeks.org/level-order-tree-traversal/

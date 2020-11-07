@@ -15,12 +15,13 @@
 	<iostream>
 	<vector>
 
-1604707236 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\main.cpp
+1604717925 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\main.cpp
 	<iostream>
 	<map>
 	<fstream>
 	<sstream>
 	<vector>
+	<utility>
 	"Registro.hpp"
 	"BST.h"
 
@@ -34,13 +35,13 @@
 	"Registro.hpp"
 	<iostream>
 
-1604707483 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\bst.h
+1604711764 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\bst.h
 	"BinaryTree.h"
 	<map>
 	<utility>
 	<string>
 
-1604707449 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\binarytree.h
+1604712896 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\binarytree.h
 	<iostream>
 	"TreeNode.h"
 
