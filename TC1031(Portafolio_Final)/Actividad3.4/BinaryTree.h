@@ -30,7 +30,7 @@ public:
     void inOrden();
     void inOrden(TreeNode<T> *);
     void inOrdenDescTop(int);
-    void inOrdenDescTop(TreeNode<T> *, int);
+    void inOrdenDescTop(TreeNode<T> *, int, int);
     void postOrden();
     void postOrden(TreeNode<T> *);
 
@@ -152,20 +152,19 @@ void BinaryTree<T>::inOrden(TreeNode<T> *node){
 
 template <class T>
 void BinaryTree<T>::inOrdenDescTop(int nPrimeros){
-    this->inOrdenDescTop(this->root, nPrimeros);
+    this->inOrdenDescTop(this->root, nPrimeros, 0);
 }
 
 template <class T>
-void BinaryTree<T>::inOrdenDescTop(TreeNode<T> *node, int limit){
-    int counter;
-    if (node != nullptr || counter < limit){
+void BinaryTree<T>::inOrdenDescTop(TreeNode<T> *node, int limit, int _counter){
+    if (_counter < limit && node != nullptr){
         //Desplazar a la derecha
-        inOrdenDescTop( node->getRight(), counter++);
+        inOrdenDescTop( node->getRight(), limit, _counter++);
         //Procesar el nodo
         std::cout << *node << endl;
         //if(counter < limit){
             //Desplazar a la izquierda
-            inOrdenDescTop( node->getLeft(), counter++);
+            inOrdenDescTop( node->getLeft(), limit, _counter++);
         //}
     }
 }

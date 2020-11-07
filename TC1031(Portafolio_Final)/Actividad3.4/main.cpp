@@ -244,13 +244,19 @@ int main(int argc, const char * argv[]) {
 
     vector<Fecha> uniqueDateVector = getEachUniqueDate();
     Fecha currentDate;
-
+//
     int uniqueDateVectorSize = uniqueDateVector.size(); //Vector que contiene cada sitio que sale en el top 5, contando repetidos
 
     multimap<int, string, greater<int>> top5Map;
     vector< pair<int, string> > repetitionCounter;
+    vector<string> top5SubsecuenteTemp;
+    vector<string> top5Subsecuente;
+    bool firstFiveCheck = false;
 
     //Top 5 de cada dia
+
+    cout << "TOP 5 CADA DIA" << endl;
+
     for(int i = 0; i < uniqueDateVectorSize; i++){
         cout << endl;
         currentDate = uniqueDateVector[i];
@@ -258,7 +264,26 @@ int main(int argc, const char * argv[]) {
         top5Map = top(5, currentDate); //Pone los top 5 en un multimapa
 
         for(auto const &pair : top5Map){ //Pone los 5 del multimapa en un vector que contiene todos los top 5 con repetidos
+            if(firstFiveCheck == false){
+                top5Subsecuente.push_back(pair.second);
+                top5SubsecuenteTemp.push_back(pair.second);
+                firstFiveCheck == true;
+            }
+            else{
+                top5SubsecuenteTemp.push_back(pair.second);
+            }
             repetitionCounter.push_back(make_pair(pair.first, pair.second));
+        }
+
+        for(int j = 0; j < top5Subsecuente.size(); j++){
+            for(int k = 0; k < top5SubsecuenteTemp.size(); k++){
+                if(top5SubsecuenteTemp[k] == top5Subsecuente[j]){
+                    break;
+                }
+                if(k == top5SubsecuenteTemp.size() && top5SubsecuenteTemp[k] != top5Subsecuente[j]){
+                    top5Subsecuente.erase(top5Subsecuente.begin() + j);
+                }
+            }
         }
     }
 
@@ -291,8 +316,6 @@ int main(int argc, const char * argv[]) {
         }
     }
 
-
-
 //    //Top 5 de cada dia usando un BST
 //    for(int i = 0; i < uniqueDateVectorSize; i++){
 //        currentDate = uniqueDateVector[i];
@@ -300,11 +323,6 @@ int main(int argc, const char * argv[]) {
 //        cout << currentDate << endl;
 //        topBST(5, currentDate);
 //    }
-
-
-    //Top 5 todos los dias
-
-    //Sitio que aparezca en el top 5 y se quede
 
     //Sitio von una con una cantidad mas trafico que lo normal
     cout << "Los sitios con una cantidad mas alta de lo normal son: " << endl;
