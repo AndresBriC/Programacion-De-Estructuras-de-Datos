@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1604563621 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\fecha.cpp
+	<iostream>
+	"Fecha.hpp"
+
+1604563554 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\fecha.hpp
+	<iostream>
+	<vector>
+
+1604524156 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\hora.cpp
+	<iostream>
+	"Hora.hpp"
+
+1604524156 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\hora.hpp
+	<iostream>
+	<vector>
+
+1604725267 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\main.cpp
+	<iostream>
+	<map>
+	<fstream>
+	<sstream>
+	<vector>
+	<utility>
+	"Registro.hpp"
+	"BST.h"
+
+1604525755 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\registro.hpp
+	<string>
+	<iostream>
+	"Fecha.hpp"
+	"Hora.hpp"
+
+1604525755 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\registro.cpp
+	"Registro.hpp"
+	<iostream>
+
+1604711764 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\bst.h
+	"BinaryTree.h"
+	<map>
+	<utility>
+	<string>
+
+1604725289 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\binarytree.h
+	<iostream>
+	"TreeNode.h"
+
+1604705060 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad3.4\treenode.h
+	<iostream>
+	<utility>
+

@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1605060419 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\grafosrepresentacionenlazada\main.cpp
+	<iostream>
+	"Graph.h"
+
+1605060736 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\grafosrepresentacionenlazada\graph.h
+	<iostream>
+	<vector>
+	<algorithm>
+	"Vertex.h"
+
+1605060749 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\grafosrepresentacionenlazada\vertex.h
+	<iostream>
+	<vector>
+	"Edge.h"
+
+1605060463 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\grafosrepresentacionenlazada\edge.h
+	<iostream>
+
