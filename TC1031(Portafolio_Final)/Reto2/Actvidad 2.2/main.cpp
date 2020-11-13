@@ -17,7 +17,8 @@
 string generaIpInterna(){
 
     int numParaIp; //Para generar IP segun la direccion de red
-    string ipInterna = "172.22.164."; //Inicializada como la direccion de red encontrada en la primera parte del reto
+    string ipInterna =
+    "172.22.164."; //Inicializada como la direccion de red encontrada en la primera parte del reto
 
     //Pide el numero entre 1 y 150
     do{

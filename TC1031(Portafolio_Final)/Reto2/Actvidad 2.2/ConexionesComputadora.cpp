@@ -156,7 +156,6 @@ void ConexionesComputadora::llenarConexionesSalientes(string ip){
     int puertoDestino = 0;
     string nombreDestino = "";
 
-
     //Lectura de cada lina del csv
     while(getline(archivo, line)){
 
