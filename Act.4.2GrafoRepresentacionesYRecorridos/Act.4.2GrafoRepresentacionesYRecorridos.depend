@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1605278510 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\act.4.2graforepresentacionesyrecorridos\addgrafo.cpp
+	<vector>
+	<iostream>
+	"Graph.h"
+	"appGrafo.h"
+
+1605276443 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\act.4.2graforepresentacionesyrecorridos\graph.h
+	<iostream>
+	<vector>
+	<algorithm>
+	"Vertex.h"
+
+1605588712 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\act.4.2graforepresentacionesyrecorridos\vertex.h
+	<iostream>
+	<vector>
+	"Edge.h"
+
+1605276443 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\act.4.2graforepresentacionesyrecorridos\edge.h
+	<iostream>
+
+1605278885 d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\act.4.2graforepresentacionesyrecorridos\appgrafo.h
+	"Graph.h"
+	<vector>
+
+1605621804 source:d:\universidad\onedrive - instituto tecnologico y de estudios superiores de monterrey\3er semestre\estructuras de datos\github repo\programacion-de-estructuras-de-datos\act.4.2graforepresentacionesyrecorridos\main.cpp
+	<iostream>
+	<vector>
+	<iterator>
+	<algorithm>
+	<time.h>
+	"Graph.h"
+

@@ -16,7 +16,7 @@ int main()
 
     //Generar los vertices
     for(int i = 0; i < numVertices; i++){
-//        vertices[i] = 65 + i;
+ //        vertices[i] = 65 + i;
         std::string nombre = "Ciudad " + std::to_string(i + 1);
         vertices[i] = Ciudad(nombre, rand() %10000000);
     }
