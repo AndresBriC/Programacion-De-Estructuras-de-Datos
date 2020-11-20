@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1605884675 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\hashmapenclase\main.cpp
+	<iostream>
+	"HashMap.h"
+
+1605884694 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\hashmapenclase\hashmap.h
+	<vector>
+
