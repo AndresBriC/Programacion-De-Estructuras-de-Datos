@@ -331,7 +331,7 @@ int conexionesANombrePorDia(string nombreAChecar, vector<Fecha> dias, vector<Reg
         cout << endl;
         grafoDelDia = creaGrafoConexionesASitiosEnDia(registros, dias[i], nombreAChecar);
         //cout << *grafoDelDia << endl;
-        cout << *grafoDelDia->getVertex(nombreAChecar) << endl;
+        cout << *grafoDelDia->getVertex(nombreAChecar);
     }
 
 
