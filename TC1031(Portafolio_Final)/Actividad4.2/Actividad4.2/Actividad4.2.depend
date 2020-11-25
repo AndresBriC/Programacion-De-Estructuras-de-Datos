@@ -1,0 +1,55 @@
+# depslib dependency file v1.0
+1606229493 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad4.2\actividad4.2\fecha.cpp
+	<iostream>
+	"Fecha.hpp"
+
+1605925800 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad4.2\actividad4.2\fecha.hpp
+	<iostream>
+	<vector>
+
+1605925385 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad4.2\actividad4.2\graph.cpp
+	"Graph.hpp"
+
+1606087926 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad4.2\actividad4.2\graph.hpp
+	<iostream>
+	<vector>
+	<algorithm>
+	"Vertex.hpp"
+
+1606273395 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad4.2\actividad4.2\vertex.hpp
+	<iostream>
+	<vector>
+	"Edge.hpp"
+
+1605925523 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad4.2\actividad4.2\edge.hpp
+	<iostream>
+
+1605925880 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad4.2\actividad4.2\hora.cpp
+	<iostream>
+	"Hora.hpp"
+
+1605925877 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad4.2\actividad4.2\hora.hpp
+	<iostream>
+	<vector>
+
+1606274021 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad4.2\actividad4.2\main.cpp
+	<iostream>
+	"Graph.hpp"
+	"Registro.hpp"
+	<map>
+	<fstream>
+	<sstream>
+
+1605925881 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad4.2\actividad4.2\registro.hpp
+	<string>
+	<iostream>
+	"Fecha.hpp"
+	"Hora.hpp"
+
+1605925938 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad4.2\actividad4.2\registro.cpp
+	"Registro.hpp"
+	<iostream>
+
+1605925415 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad4.2\actividad4.2\vertex.cpp
+	"Vertex.hpp"
+
