@@ -59,3 +59,33 @@
 	"Registro.h"
 	<iostream>
 
+1605729221 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\act1.3\actividad1.3\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1605729221 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\act1.3\actividad1.3\fecha.h
+	<iostream>
+
+1606226262 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\act1.3\actividad1.3\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<string>
+	"Registro.h"
+	"Ordenamiento.h"
+	"Fecha.h"
+
+1605729221 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\act1.3\actividad1.3\registro.h
+	<string>
+	<iostream>
+	"Fecha.h"
+
+1605729221 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\act1.3\actividad1.3\ordenamiento.h
+	<iostream>
+	<vector>
+
+1605729221 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\act1.3\actividad1.3\registro.cpp
+	"Registro.h"
+	<iostream>
+

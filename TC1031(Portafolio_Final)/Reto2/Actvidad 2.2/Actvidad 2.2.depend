@@ -123,3 +123,50 @@
 	"Registro.h"
 	<iostream>
 
+1605729221 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\reto2\actvidad 2.2\conexionescomputadora.cpp
+	"ConexionesComputadora.h"
+	<fstream>
+	<sstream>
+	<string>
+
+1605729221 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\reto2\actvidad 2.2\conexionescomputadora.h
+	<stdio.h>
+	<iostream>
+	<vector>
+	<queue>
+	<stack>
+	"Registro.h"
+	"Fecha.h"
+
+1605729221 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\reto2\actvidad 2.2\registro.h
+	<string>
+	<iostream>
+	"Fecha.h"
+	"Hora.h"
+
+1605729221 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\reto2\actvidad 2.2\fecha.h
+	<iostream>
+	<vector>
+
+1605729221 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\reto2\actvidad 2.2\hora.h
+	<iostream>
+	<vector>
+
+1605729221 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\reto2\actvidad 2.2\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1605729221 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\reto2\actvidad 2.2\hora.cpp
+	<iostream>
+	"Hora.h"
+
+1605729221 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\reto2\actvidad 2.2\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"ConexionesComputadora.h"
+
+1605729221 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\reto2\actvidad 2.2\registro.cpp
+	"Registro.h"
+	<iostream>
+

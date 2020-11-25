@@ -31,3 +31,25 @@
 	<time.h>
 	"Graph.h"
 
+1605729221 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\act.4.2graforepresentacionesyrecorridos\main.cpp
+	<iostream>
+	<vector>
+	<iterator>
+	<algorithm>
+	<time.h>
+	"Graph.h"
+
+1605729221 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\act.4.2graforepresentacionesyrecorridos\graph.h
+	<iostream>
+	<vector>
+	<algorithm>
+	"Vertex.h"
+
+1605729221 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\act.4.2graforepresentacionesyrecorridos\vertex.h
+	<iostream>
+	<vector>
+	"Edge.h"
+
+1605729221 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\act.4.2graforepresentacionesyrecorridos\edge.h
+	<iostream>
+
