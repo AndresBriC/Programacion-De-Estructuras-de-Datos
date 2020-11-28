@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1606453168 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad5.2\actividad5.2\conexionescomputadora.cpp
+	"ConexionesComputadora.hpp"
+	<fstream>
+	<sstream>
+	<string>
+
+1606225120 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad5.2\actividad5.2\conexionescomputadora.hpp
+	<stdio.h>
+	<iostream>
+	<vector>
+	<queue>
+	<stack>
+	"Registro.hpp"
+	"Fecha.hpp"
+
+1606225253 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad5.2\actividad5.2\registro.hpp
+	<string>
+	<iostream>
+	"Fecha.hpp"
+	"Hora.hpp"
+
+1606225122 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad5.2\actividad5.2\fecha.hpp
+	<iostream>
+	<vector>
+
+1606225118 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad5.2\actividad5.2\hora.hpp
+	<iostream>
+	<vector>
+
+1606227592 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad5.2\actividad5.2\fecha.cpp
+	<iostream>
+	"Fecha.hpp"
+
+1606225121 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad5.2\actividad5.2\hora.cpp
+	<iostream>
+	"Hora.hpp"
+
+1606453168 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad5.2\actividad5.2\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<set>
+	<map>
+	"ConexionesComputadora.hpp"
+
+1606225125 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\tc1031(portafolio_final)\actividad5.2\actividad5.2\registro.cpp
+	"Registro.hpp"
+	<iostream>
+

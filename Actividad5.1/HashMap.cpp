@@ -1,16 +1,24 @@
-#ifndef HASHMAP_H_INCLUDED
-#define HASHMAP_H_INCLUDED
+//
+//  HashMap.cpp
+//  HashMap
+//
+//  Created by inigo guerra on 23/11/20.
+//
 
+#include "HashMap.hpp"
 #include <vector>
+#include <string>
 
 template <class K, class V>
-class HashMap{
-    int _capacity;
-    int _size;
+class HashMap {
+    int _capacity = 0;
 
     std::vector<K> _keys;
-    std::vector<V> _values;
+    std::vector<V>  _values;
     std::vector<std::string> _status;
+
+    int _size = 0;
+
     int hash_function(K) const;
 
 public:
@@ -26,7 +34,8 @@ public:
 };
 
 template <class K, class V>
-HashMap<K,V>::HashMap(int capacity){
+HashMap<K,V>::HashMap(int capacity)
+{
     this->_capacity = capacity;
     this->_status = std::vector<std::string>(capacity);
     this->_keys = std::vector<K>(capacity);
@@ -36,34 +45,47 @@ HashMap<K,V>::HashMap(int capacity){
 }
 
 template <class K, class V>
-HashMap<K,V>::~HashMap(){
-//    delete _status;
-//    delete _values;
-//    delete _keys;
+HashMap<K,V>::~HashMap()
+{
+    /*
+    delete this->_status;
+    delete this->_values;
+    delete this->_keys;
+     */
 }
 
 template <class K, class V>
-bool HashMap<K,V>::empty() const{
+bool HashMap<K,V>::empty() const
+{
     return this->_size == 0;
 }
 
 template <class K, class V>
-int HashMap<K,V>::size() const{
+int HashMap<K,V>::size() const
+{
     return this->_size;
 }
 
 template <class K, class V>
-bool HashMap<K,V>::put(K key,V value){
+int HashMap<K,V>::hash_function(K key) const
+{
+    return key % this->_capacity;
+}
+
+//Complejidad O(n)
+template <class K, class V>
+bool HashMap<K,V>::put(K key,V value)
+{
     int indice = hash_function(key);
-    if(this->_status[indice] == "ocupado"){
+
+    if (this->_status[indice] == "ocupado") {
         indice = rehash(indice, 0); //Recalcular
     }
 
-    if (indice > -1){
+    if (indice > -1) {
         this->_keys[indice] = key;
         this->_values[indice] = value;
         this->_status[indice] = "ocupado";
-        this->_size++;
 
         return true;
     }
@@ -72,44 +94,47 @@ bool HashMap<K,V>::put(K key,V value){
 }
 
 template <class K, class V>
-int HashMap<K,V>::rehash(int indice, int steps){
-    if(indice < this->_capacity && steps < this->_capacity){
+int HashMap<K,V>::rehash(int indice, int steps)
+{
+    if (indice < this->_capacity && steps < this->_capacity) {
+
         ++indice;
 
-        if(indice == this->_capacity){
-            indice = 0;
-        }
+        if (indice == this->_capacity) indice = 0;
 
-        if(this->_status[indice] == "ocupado"){
+        if (this->_status[indice] == "ocupado")
+        {
             indice = rehash(indice, ++steps);
         }
 
         return indice;
     }
-    else{
+    else {
         return -1;
     }
 }
 
+//Complejidad O(n)
 template <class K, class V>
-V HashMap<K,V>::get(K key){
-    int indice = hash_function(key);
+V HashMap<K,V>::get(K key)
+{
     bool found = false;
     int steps = 0;
 
-    while(!found && steps < this->_capacity){
-        if(this->_status[indice] == "ocupado"){
-            if(this->_keys[indice] == key){
+    int indice = hash_function(key);
+
+    while (!found && steps < this->_capacity) {
+        if (this->_status[indice] == "ocupado") {
+            if (this->_keys[indice] == key) {
                 found = true;
             }
-            else{
+            else {
                 found = false;
                 ++indice;
                 if (indice == this->_capacity) indice = 0;
-
             }
         }
-        else{
+        else {
             ++indice;
             if (indice == this->_capacity) indice = 0;
         }
@@ -121,10 +146,3 @@ V HashMap<K,V>::get(K key){
     else
         return -1;
 }
-
-template <class K, class V>
-int HashMap<K,V>::hash_function(K key) const{
-    return key % this->_capacity;
-}
-
-#endif // HASHMAP_H_INCLUDED

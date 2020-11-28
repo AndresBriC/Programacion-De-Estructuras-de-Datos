@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1606513306 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\actividad5.1\hashmapchain.cpp
+	"HashMapChain.hpp"
+	"HashNode.hpp"
+	<vector>
+
+1606156353 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\actividad5.1\hashmapchain.hpp
+	<stdio.h>
+
+1606164055 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\actividad5.1\hashnode.hpp
+	<iostream>
+
+1606158466 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\actividad5.1\hashnode.cpp
+	"HashNode.hpp"
+
+1606536748 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\actividad5.1\main.cpp
+	<iostream>
+	"HashMap.cpp"
+	"HashMapChain.cpp"
+
+1606536878 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\actividad5.1\hashmap.cpp
+	"HashMap.hpp"
+	<vector>
+	<string>
+
+1606155411 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\actividad5.1\hashmap.hpp
+	<stdio.h>
+
+1606513306 d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\actividad5.1\hashmapchain.cpp
+	"HashMapChain.hpp"
+	"HashNode.hpp"
+	<vector>
+
+1606536878 source:d:\repository\universidad\3er semestre\estructuras de datos\programacion-de-estructuras-de-datos\actividad5.1\hashmap.cpp
+	"HashMap.hpp"
+	<vector>
+	<string>
+
