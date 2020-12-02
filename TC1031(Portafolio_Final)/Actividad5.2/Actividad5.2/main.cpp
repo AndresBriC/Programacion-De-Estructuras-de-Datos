@@ -241,9 +241,107 @@ set<string> IPentrnates(vector<Registro> registros){
         }
     }
 
-
-
     return IPs;
+}
+
+//Checa si las IP's encontradas en IPentrantes se conectaron con alguno de los sitios raros.
+vector<Registro> checaConexionEntreIpYNombresRaros(vector<Registro> registros, set<string> IPentrantes, bool &siteWasFound){
+    string nombre1 = ",ggex1ffe16fwzk3as5vd.net";
+    string nombre2 = ",e1vrkur1pw73zlhg9asc.ru";
+    int registrosSize = registros.size();
+    vector<Registro> registrosQueSeConectan;
+    //bool nombre1Found, nombre2Found = false; //Variables para debug
+
+    for (auto elem: IPentrantes){ //Por cada elemento en el set de IP's encontradas
+        cout << "Checando para IP " << elem << endl;
+        for(int i = 0; i<registrosSize; i++){ //Itera por cada registro
+            //Checa si la IP entrante en el registro actual es igual a la IP entrante en la lista de IP's encontrantes y si el sitio con el que conecta es uno de los raros
+            if((registros[i].getIpOrigen() == elem && registros[i].getNombreDestino() == nombre1) || (registros[i].getIpOrigen() == elem && registros[i].getNombreDestino() == nombre2)){
+                cout << "El IP " << elem << " se conectó con el sitio " << registros[i].getNombreDestino() << endl;
+                siteWasFound = true;
+                registrosQueSeConectan.push_back(registros[i]);
+                break; //Rompe el for de registros para comparar con el IP encontrado siguiente
+            }
+
+
+            //Debug para probar el caso donde se conecten con sitios raros
+//            if(registros[i].getNombreDestino() == nombre1 && !nombre1Found){
+//                cout << "El IP " << registros[i].getIpOrigen() << " se conectó con el sitio " << registros[i].getNombreDestino() << endl;
+//                registrosQueSeConectan.push_back(registros[i]);
+//                nombre1Found = true;
+//                siteWasFound = true;
+//            }
+//
+//            if(registros[i].getNombreDestino() == nombre1 && !nombre2Found){
+//                cout << "El IP " << registros[i].getIpOrigen() << " se conectó con el sitio " << registros[i].getNombreDestino() << endl;
+//                registrosQueSeConectan.push_back(registros[i]);
+//                nombre2Found = true;
+//                siteWasFound = true;
+//            }
+        }
+    }
+
+    if(siteWasFound == false){
+        cout << "Ninguna de las IP's se conecta con alguno de los nombres raros" << endl;
+    }
+    else{
+        cout << "Alguna de las IP's se conecta con alguno de los nombres raros" << endl;
+    }
+
+    return registrosQueSeConectan;
+
+}
+
+void checaPrimeraConexionYProtocolo(Registro registroActual){
+    cout << "Primera fecha de conexion con el sitio raro: " << registroActual.getFecha() << " IP: " << registroActual.getIpOrigen() << " ";
+
+    switch(registroActual.getPuertoDestino()){
+        case 22:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: Secure Shell, secure logins, file transfers y port forwarding" << endl;
+            break;
+        case 23:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: Telnet protocol, Comunicaciones de texto no encriptadas" << endl;
+            break;
+        case 53:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: Domain Name System (DNS)" << endl;
+            break;
+        case 67:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: Bootstrap Protocol y usado por Dynamic Host Configuration Protocol" << endl;
+            break;
+        case 68:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: Bootstrap Protocol y usado por Dynamic Host Configuration Protocol" << endl;
+            break;
+        case 69:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: Trivial File Transfer Protocol" << endl;
+            break;
+        case 70:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: Gopher Protocol" << endl;
+            break;
+        case 80:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: Hypertext Transfer Protocol" << endl;
+            break;
+        case 110:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: Post Office Protocol, versión 3" << endl;
+            break;
+        case 135:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: DCE endpoint resolution, Microsoft EPMAP" << endl;
+            break;
+        case 443:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: Hypertext Transfer Protocol" << endl;
+            break;
+        case 445:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: Microsoft DS Active Directory, Microsoft DS SMB file sharing" << endl;
+            break;
+        case 465:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: URL Rendezevous Directory para SSM" << endl;
+            break;
+        case 666:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: para Doom, juego de disparos en primera persona" << endl;
+            break;
+        case 993:
+            cout << "Protocolo: " << registroActual.getPuertoDestino() << " Uso: Internet Message Access Protocol en TLS/SSL" << endl;
+            break;
+    }
 }
 
 int main(int argc, const char * argv[]) {
@@ -279,6 +377,26 @@ int main(int argc, const char * argv[]) {
     cout << endl;
 
     //Pregunta 6
+    bool conectionWasFound = false; //Almacena si se encontro una conexion con alguno de los sitios raros
+    vector<Registro> registrosConectadosASitioRaro; //Vector que almacena los registros que se conectaron uno de los sitios raros
 
+    cout << "Direcciones IP encontradas que se comunicaron con alguno de los dos sitios raros: " << endl;
+    registrosConectadosASitioRaro = checaConexionEntreIpYNombresRaros(registros, IPentrantes, conectionWasFound);
+
+    //Pregunta 7
+    cout << endl;
+    cout << "Pregunta 7" << endl;
+    cout << endl;
+
+    int registrosConectadosASitioRaroSize = registrosConectadosASitioRaro.size(); //Referencia al tamanio del vector
+
+    if(conectionWasFound){ //Si se encontraron conexiones entre las IP y los sitios raros
+        for(int i = 0; i<registrosConectadosASitioRaroSize; i++){
+            checaPrimeraConexionYProtocolo(registrosConectadosASitioRaro[i]);
+        }
+    }
+    else{ //Si no se encontraron conexiones entre las IP y los sitios raros
+        cout << "Ninguna de las IP's encontradas se conecta con alguno de los sitios raros" << endl;
+    }
 
 }
